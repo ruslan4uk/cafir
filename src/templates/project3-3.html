@@ -1,0 +1,55 @@
+---
+title: Сбор броней
+---
+{% extends "layouts/_progress-bar.html" %}
+
+{% block content %}
+    <div class="wrap">
+		<div class="project-content small">
+			<div class="counts counts--pdt-fix">
+				<div class="project-content__icon">
+					<svg> 
+						<use xlink:href="img/sprite.svg#icon-project-title-icon3" />
+					</svg>
+				</div>
+				<div class="project-content__title">Сбор завершен</div>
+				<div class="bottom-content">
+					<div class="progress done success">
+						<div class="slider">
+							<div class="result " style="width: 100%;"></div>
+						</div>
+						<span>100%</span>
+					</div>
+					<div class="flex">
+						<div class="price">
+							Собрано
+							<span>500 000 руб</span>
+						</div>
+						<div class="project-content__devider"></div>
+						<div class="price">
+							Цель
+							<span>3 500 000 руб</span>
+						</div>
+						<div class="project-content__devider"></div>
+						<div class="rating">
+							Рейтинг
+							<div>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+								<i class="fa fa-star-o"></i>
+							</div>
+						</div>
+						<div class="button">
+							<button>Презентация проекта</button>
+                            <a href="">Документация</a>
+                            <a href="">Обязательства</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
