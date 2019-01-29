@@ -2925,11 +2925,13 @@ h1
   // invest btn
   &__invest
     display: flex
+    flex-wrap: wrap
     justify-content: space-between
     &-btn 
       display: block
       text-decoration: none
-      width: calc(50% - 0.5rem)
+      width: 100%
+      margin-bottom: 20px
       background-color: #fefefe
       border-radius: 4px
       padding: 20px
@@ -2937,6 +2939,9 @@ h1
       font-family: 'Russo One', sans-serif
       font-weight: 400
       color: #05203f
+      +rmin(540)
+        width: calc(50% - 0.5rem)
+        margin-bottom: 0
       & img 
         margin-bottom: 5px
 
@@ -3141,6 +3146,17 @@ h1
       background: #cccccc
     &::-ms-tooltip 
       display: none
+
+  form 
+    input[type='text']
+      width: 100%
+      margin-bottom: 15px
+      font-size: 14px
+      border: 0
+      font-family: 'Lato'
+      background: #eef0fc
+      padding: 12px 24px
+      border-radius: 4px
 
     // margin: auto
     // -webkit-appearance: none
