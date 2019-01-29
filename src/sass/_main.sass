@@ -2809,3 +2809,516 @@ h1
       background-color: #999
     &::-webkit-resizer
       background-color: #666
+
+
+// modal
+.modal 
+  display: none
+  background-color: rgba(63,68,85,0.85)
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1
+  display: none
+  width: 100%
+  height: 100%
+  outline: 0
+  overflow-x: hidden
+  overflow-y: auto
+  & a 
+    color: #3b85ea
+    font-size: 14px
+  &__dialog
+    min-height: calc(100% - (1.75rem * 2))
+    display: flex
+    align-items: center
+    position: relative
+    width: auto
+    margin: .5rem
+    pointer-events: none
+    margin: 1.75rem auto
+    &--small
+      max-width: 400px
+      & .modal__body
+        padding: 25px 15px
+    &--medium
+      max-width: 620px      
+      & .modal__body
+        padding: 20px
+        +rmin(768)
+          padding: 40px
+    &--invest
+      max-width: 480px
+  &__content 
+    position: relative
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-direction: column
+    flex-direction: column
+    width: 100%
+    pointer-events: auto
+    outline: 0
+    padding: 10px
+  
+  &__body
+    background-color: #fefefe
+    border-radius: 4px
+    & p 
+      font-size: 13px
+      font-family: 'Lato'
+      margin-bottom: 5px
+      &.descr
+        margin-bottom: 20px
+    & hr 
+      margin-top: 20px
+      margin-bottom: 20px
+      background: #758293
+      color: #758293
+    & ol 
+      margin-bottom: 30px
+      list-style: decimal
+      margin-left: 20px
+      & li 
+        color: #758293
+        font-family: 'Lato'
+        font-size: 16px
+        margin-bottom: 20px
+  &__btitle
+    font-family: 'Lato'
+    color: #758293
+    font-size: 22px
+    margin-bottom: 10px
+  &__header
+    margin-bottom: 20px
+    display: flex
+    justify-content: space-between
+  &__htitle
+    font-family: 'Russo One', sans-serif
+    font-weight: 400
+    color: #ffffff
+    font-size: 22px
+    padding-right: 20px
+  &__close
+    cursor: pointer
+    margin-top: 3px
+    & svg 
+      fill: #ffffff
+      width: 20px
+      height: 20px
+
+  &__btn
+    color: #fff
+    border-radius: 3px
+    background: #2cae82
+    padding: 13px 25px
+    width: 100%
+    &--blue
+      background-color: #4088ea
+    &--auto 
+      width: 100%
+      +rmin(768) 
+        width: auto
+  &__oauth
+    margin-top: 20px
+    text-align: center
+
+  // invest btn
+  &__invest
+    display: flex
+    justify-content: space-between
+    &-btn 
+      display: block
+      text-decoration: none
+      width: calc(50% - 0.5rem)
+      background-color: #fefefe
+      border-radius: 4px
+      padding: 20px
+      font-size: 22px
+      font-family: 'Russo One', sans-serif
+      font-weight: 400
+      color: #05203f
+      & img 
+        margin-bottom: 5px
+
+  // modal body style
+  &__title
+    color: #05203f
+    font-size: 25px
+    font-family: 'Lato'
+    margin-bottom: 30px
+    &--flag 
+      margin-bottom: 20px
+      padding-left: 30px
+      position: relative
+      &:before
+        content: ' '
+        position: absolute
+        top: 5px
+        left: 0
+        background-image: url(img/modal/flag.png)
+        background-size: contain
+        background-repeat: no-repeat
+        width: 25px
+        height: 35px
+        display: block
+
+  &__subtitle, &__subtitle a
+    color: #05203f
+    font-size: 17px
+    font-family: 'Lato'
+    margin-bottom: 15px
+    font-weight: 600
+    &--bam 
+      font-weight: 900
+      margin-bottom: 30px
+  &__declaration
+    font-size: 12px
+    color: #758293
+    margin-bottom: 20px
+  &__grey
+    color: #c1c2c4
+  &__confirmation
+    margin-bottom: 10px
+    +rmin(768)
+      margin-bottom: 0
+
+  &__footer
+    margin-top: 20px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+  &__square
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 10px
+    &-item
+      width: 100%
+      min-width: 120px
+      padding: 20px 15px
+      text-align: center
+      box-shadow: rgba(1,1,1,.05) 0 0 10px
+      text-decoration: none
+      border: 1px solid #eeeeee
+      margin-bottom: 20px
+      +tr(all ease 0.2s)
+      +rmin(768)
+        width: 25%
+        margin-right: 20px
+      &:hover
+        box-shadow: 0 0 2px 2px rgba(0,0,0,.01)
+      & p 
+        font-size: 14px
+        color: #758293
+        margin-bottom: 5px
+        & strong 
+          font-size: 17px
+          font-family: 'Lato'
+          font-weight: bold
+          color: #05203f
+    
+  // calc
+  &__calc
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 30px
+    &--mb
+      margin-bottom: 10px
+    &-item 
+      width: 50%
+      margin-bottom: 10px
+      +rmin(768)
+        width: 30%
+        padding-right: 15px
+      & p 
+        color: #3b85ea
+        font-size: 13px
+        font-family: 'Lato'
+        & strong 
+          font-family: 'Lato'
+          font-weight: 900
+          color: #05203f
+          font-size: 16px
+    &-descr
+      color: #758293
+      font-size: 13px
+      width: 100%
+      +rmin(768)
+        width: 200px
+        margin-left: auto
+    &-icon 
+      width: 32px
+      height: 32px
+      margin-bottom: 5px
+      fill: #3b85ea
+  &__deadline
+    font-size: 16px !important
+    margin-bottom: 30px !important
+
+  // radio
+  &__radio-group
+    margin-bottom: 5px
+  &__radio-select
+    margin-bottom: 30px
+    display: flex
+    flex-wrap: wrap
+    .radio
+      position: absolute
+      z-index: -1
+      opacity: 0
+      margin: 10px 0 0 7px
+      + label
+        position: relative
+        padding: 0 25px 0 20px
+        cursor: pointer
+        font-size: 13px
+        color: #758293
+        &:before
+          content: ''
+          position: absolute
+          top: 1px
+          left: 0
+          width: 12px
+          height: 12px
+          background: url('img/radio.png')
+      &:checked + label:before
+        background: url('img/radio-active.png')
+
+  // checkbox
+  .checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+    margin: 10px 0 0 7px
+    + label
+      position: relative
+      padding: 0 0 10px 20px
+      cursor: pointer
+      font-size: 13px
+      color: #758293
+      display: block
+      font-weight: 400
+      font-family: 'Lato'
+      &:before
+        content: ''
+        position: absolute
+        top: 1px
+        left: 0
+        width: 12px
+        height: 12px
+        background: url('img/checkbox.png')
+        border-radius: 4px
+    &:checked + label:before
+      background: #758293
+
+  .modal__slider
+    margin-bottom: 10px
+  // range 
+  input[type="range"] 
+    background: linear-gradient(to right, #2cae82 0%, #2cae82 50%, #fff 50%, #fff 100%)
+    border: solid 1px #cccccc
+    border-radius: 8px
+    height: 13px
+    width: 100%
+    outline: none
+    transition: background 450ms ease-in
+    -webkit-appearance: none
+    border-radius: 10px
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      width: 3px // 1
+      height: 22px
+      background: #cccccc
+    &::-moz-range-thumb
+      -webkit-appearance: none
+      width: 3px // 1
+      height: 22px
+      background: #cccccc
+    &::-ms-thumb
+      -webkit-appearance: none
+      width: 3px // 1
+      height: 22px
+      background: #cccccc
+    &::-ms-tooltip 
+      display: none
+
+    // margin: auto
+    // -webkit-appearance: none
+    // position: relative
+    // overflow: hidden
+    // height: 13px
+    // width: 100%
+    // cursor: pointer
+    // border-radius: 10px // iOS 
+    // border: 1px solid #eeeeee
+    // &::-webkit-slider-runnable-track 
+    //   background: transparent
+    // // 1. Set to 0 width and remove border for a slider without a thumb
+    // &::-webkit-slider-thumb 
+    //   -webkit-appearance: none
+    //   width: 1px // 1
+    //   height: 13px
+    //   background: #fff
+    //   box-shadow: -100vw 0 0 100vw #2cae82
+    //   border: 2px solid #999  // 1
+    // &::-moz-range-track 
+    //   height: 13px
+    //   background: #ddd
+    // &::-moz-range-thumb 
+    //   background: #fff
+    //   height: 13px
+    //   width: 1px // 1
+    //   border: 3px solid #999
+    //   border-radius: 0 !important
+    //   box-shadow: -100vw 0 0 100vw #2cae82
+    //   box-sizing: border-box
+    // &::-ms-fill-lower 
+    //   background: #2cae82
+    // &::-ms-thumb 
+    //   background: #fff
+    //   border: 2px solid #999
+    //   height: 13px
+    //   width: 1px // 1
+    //   box-sizing: border-box
+    // &::-ms-ticks-after 
+    //   display: none
+    // &::-ms-ticks-before 
+    //   display: none
+    // &::-ms-track 
+    //   background: #ddd
+    //   color: transparent
+    //   height: 13px
+    //   border: none
+    // &::-ms-tooltip 
+    //   display: none
+
+
+
+
+
+
+  // modal form
+  form2
+    background: #fff
+    border-radius: 4px
+    .name
+      font-weight: 500
+      font-size: 19px
+      color: #05203f
+      margin-bottom: 5px
+      span
+        display: block
+        font-weight: 400
+        font-size: 12px
+        color: #bababa
+        padding: 5px 100px 0 0
+    input[type='text']
+      width: 100%
+      margin-bottom: 15px
+      font-size: 14px
+      border: 0
+      font-family: 'Lato'
+      background: #eef0fc
+      padding: 12px 24px
+      border-radius: 4px
+    .project-info
+      p
+        font-size: 15px
+        margin-bottom: 10px
+      .checkbox
+        position: absolute
+        z-index: -1
+        opacity: 0
+        margin: 10px 0 0 7px
+        + label
+          position: relative
+          padding: 0 0 10px 20px
+          cursor: pointer
+          font-size: 12px
+          color: #758293
+          display: block
+          &:before
+            content: ''
+            position: absolute
+            top: 1px
+            left: 0
+            width: 12px
+            height: 12px
+            background: url('img/checkbox.png')
+            border-radius: 4px
+        &:checked + label:before
+          background: #758293
+    .select
+      margin-bottom: 30px
+      &.no_m
+        padding: 0
+      p
+        font-size: 15px
+        color: #05203f
+        margin-bottom: 10px
+      .radio
+        position: absolute
+        z-index: -1
+        opacity: 0
+        margin: 10px 0 0 7px
+        + label
+          position: relative
+          padding: 0 25px 0 20px
+          cursor: pointer
+          font-size: 12px
+          color: #758293
+          &:before
+            content: ''
+            position: absolute
+            top: 1px
+            left: 0
+            width: 12px
+            height: 12px
+            background: url('img/radio.png')
+        &:checked + label:before
+          background: url('img/radio-active.png')
+    .upload
+      padding: 10px 0 20px 0
+      p
+        font-size: 15px
+        color: #05203f
+        margin-bottom: 12px
+      a
+        display: inline-block
+        vertical-align: middle
+        width: 77px
+        height: 93px
+        background: url('img/upload.png')
+        margin-right: 25px
+      span
+        display: inline-block
+        vertical-align: middle
+        font-size: 12px
+        color: #bababa
+        width: 155px
+        font-family: 'Lato'
+    p
+      font-size: 15px
+      color: #05203f
+      padding: 15px 0 5px
+    .tar
+      padding-top: 15px
+
+// oauth
+.oauth
+  &__list
+    display: flex
+    justify-content: center
+  &__item
+    width: 100%
+    max-width: 30px
+    margin: 10px 10px 0 10px
+    opacity: 1
+    +tr(all ease .2s)
+    &:hover 
+      opacity: 0.75
+  &__title
+    font-family: 'Lato'
+    font-weight: 700
+    color: #05203f
+    font-size: 14px

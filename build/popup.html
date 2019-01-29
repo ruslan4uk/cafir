@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Модальные окна</title>
+    <base href="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="slick.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/common.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li><a href="" data-action="modal-email">1. Введите ваш email</a></li>
+      <li><a href="" data-action="modal-register">2. Давайте познакомимся</a></li>
+      <li><a href="" data-action="modal-code">3. Подтвердите код по смс</a></li>
+      <li><a href="" data-action="modal-target">4. Ваши цели</a></li>
+      <li><a href="" data-action="modal-skype">Укажите свой скайп для связи</a></li>
+      <li><a href="" data-action="modal-interview">Что нужно подготовить для интервью</a></li>
+      <li><a href="" data-action="modal-thank">Спасибо</a></li>
+      <hr>
+      <li><a href="" data-action="modal-share1">Форма доля 1</a></li>
+      <li><a href="" data-action="modal-share2">Форма доля 2</a></li>
+      <hr>
+      <li><a href="" data-action="modal-loan1">Форма займ 1</a></li>
+      <li><a href="" data-action="modal-loan2">Форма займ 2</a></li>
+    </ul>
+    <div class="modal" data-modal="modal-email">
+      <div class="modal__dialog modal__dialog--small">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__htitle">1. Введите ваш email</div>
+            <div class="modal__close">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-cancel" />
+              </svg>
+            </div>
+          </div>
+          <div class="modal__body form">
+            <form>
+              <input type="text" placeholder="ИНН">
+              <button class="modal__btn modal__btn--blue">Дальше</button>
+            </form>
+            <div class="modal__oauth oauth">
+              <div class="oauth__title">Или войдите с помощью</div>
+              <div class="oauth__list">
+                <div class="oauth__item"><a href=""><img src="img/oauth/google.svg" alt=""></a></div>
+                <div class="oauth__item"><a href=""><img src="img/oauth/facebook.svg" alt=""></a></div>
+                <div class="oauth__item"><a href=""><img src="img/oauth/vk.svg" alt=""></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-register">
+      <div class="modal__dialog modal__dialog--small">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__htitle">2. Давайте познакомимся</div>
+            <div class="modal__close">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-cancel" />
+              </svg>
+            </div>
+          </div>
+          <div class="modal__body form">
+            <form>
+              <input type="text" placeholder="Ваше имя">
+              <input type="text" placeholder="Ваше фамилия">
+              <input type="text" placeholder="Ваш номер телефона">
+              <button class="modal__btn modal__btn--blue">Продолжить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-code">
+      <div class="modal__dialog modal__dialog--small">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__htitle">3. Подтвердите код по смс</div>
+            <div class="modal__close">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-cancel" />
+              </svg>
+            </div>
+          </div>
+          <div class="modal__body form">
+            <form>
+              <input type="text" placeholder="Введите код">
+              <button class="modal__btn modal__btn--blue">Продолжить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-target">
+      <div class="modal__dialog modal__dialog--invest">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__htitle">4. Ваши цели</div>
+            <div class="modal__close">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-cancel" />
+              </svg>
+            </div>
+          </div>
+          <div class="modal__invest">
+            <!-- tag a or div -->
+            <a class="modal__invest-btn">
+              <img src="img/modal/invest.jpg" alt=""> Инвестировать </a>
+            <div class="modal__invest-btn">
+              <img src="img/modal/lead-invest.jpg" alt=""> Привлечь инвестиции </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-skype">
+      <div class="modal__dialog modal__dialog--small">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__htitle">Укажите свой скайп для связи</div>
+            <div class="modal__close">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-cancel" />
+              </svg>
+            </div>
+          </div>
+          <div class="modal__body form">
+            <form>
+              <input type="text" placeholder="Введите скайп">
+              <button class="modal__btn modal__btn--blue">Продолжить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-interview">
+      <div class="modal__dialog modal__dialog--small">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__htitle">Что нужно подготовить для интервью</div>
+            <div class="modal__close">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-cancel" />
+              </svg>
+            </div>
+          </div>
+          <div class="modal__body form">
+            <ol>
+              <li>Информация о том, что нужно подготовить </li>
+              <li>Информация о том, что нужно подготовить </li>
+              <li>Информация о том, что нужно подготовить </li>
+              <li>Информация о том, что нужно подготовить </li>
+              <li>Информация о том, что нужно подготовить </li>
+            </ol>
+            <button class="modal__btn modal__btn--blue">Дальше</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-thank">
+      <div class="modal__dialog modal__dialog--small">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__htitle">Спасибо</div>
+            <div class="modal__close">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-cancel" />
+              </svg>
+            </div>
+          </div>
+          <div class="modal__body form">
+            <div class="modal__btitle">В течение часа мы позвоним вам для уточнения времени</div>
+            <br />
+            <button class="modal__btn modal__btn--blue">ОК</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-share1">
+      <div class="modal__dialog modal__dialog--medium">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__htitle"></div>
+            <div class="modal__close">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-cancel" />
+              </svg>
+            </div>
+          </div>
+          <div class="modal__body form">
+            <form>
+              <div class="modal__title">Системы охлаждения “Мороз”</div>
+              <div class="modal__square">
+                <div class="modal__square-item">
+                  <p>Срок займа</p>
+                  <p><strong>365 дней</strong></p>
+                </div>
+                <div class="modal__square-item">
+                  <p>Ставка</p>
+                  <p><strong>24%</strong></p>
+                </div>
+              </div>
+              <div class="modal__subtitle">Выберите сумму займа</div>
+              <div class="modal__slider">
+                <input type="range" name="" id="" value="25" class="js--range-slider">
+              </div>
+              <p class="modal__grey">Минимальная сумма для инвестирования 100 000 р.</p>
+              <hr>
+              <div class="modal__calc">
+                <div class="modal__calc-item">
+                  <svg class="modal__calc-icon">
+                    <use xlink:href="img/sprite.svg#icon-calc1" />
+                  </svg>
+                  <p>Занимаете</p>
+                  <p><strong>100 000 руб</strong></p>
+                </div>
+                <div class="modal__calc-item">
+                  <svg class="modal__calc-icon">
+                    <use xlink:href="img/sprite.svg#icon-calc2" />
+                  </svg>
+                  <p>Зарабатываете</p>
+                  <p><strong>124 000 руб</strong></p>
+                </div>
+                <div class="modal__calc-descr"> Проценты и часть теда долга выплачиваются ежемесячно </div>
+              </div>
+              <div class="modal__subtitle">Выберите реквизиты для договора</div>
+              <div class="modal__radio-select">
+                <div class="modal__radio-group">
+                  <input type="radio" class="radio" id="r3" name="r2"><label for="r3">Иван Петров</label>
+                </div>
+                <div class="modal__radio-group">
+                  <input type="radio" class="radio" id="r4" name="r2"><label for="r4">ИП Иван Петров</label>
+                </div>
+                <div class="modal__radio-group">
+                  <input type="radio" class="radio" id="r5" name="r2"><label for="r5">ООО “Иваново”</label>
+                </div>
+              </div>
+              <div class="modal__subtitle">Деклорация о рисках</div>
+              <div class="modal__declaration">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</p>
+              </div>
+              <a href="">Открыть</a>
+              <div class="modal__footer">
+                <div class="modal__confirmation">
+                  <input type="checkbox" name="" id="ch1" class="checkbox"><label for="ch1" class="modal__gray">Я ознакомлен с деклорацией о рисках</label>
+                </div>
+                <button class="modal__btn modal__btn--auto">Выставить счет</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-share2">
+      <div class="modal__dialog modal__dialog--medium">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__htitle"></div>
+            <div class="modal__close">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-cancel" />
+              </svg>
+            </div>
+          </div>
+          <div class="modal__body form">
+            <form>
+              <div class="modal__title">Системы охлаждения “Мороз”</div>
+              <div class="modal__subtitle modal__subtitle--bam">Покупка доли</div>
+              <div class="modal__subtitle">Выберите сумму инвестиций</div>
+              <div class="modal__slider">
+                <input type="range" name="" id="" value="25" class="js--range-slider">
+              </div>
+              <p class="modal__grey">Минимальная сумма для инвестирования 100 000 р.</p>
+              <hr>
+              <div class="modal__calc">
+                <div class="modal__calc-item">
+                  <svg class="modal__calc-icon">
+                    <use xlink:href="img/sprite.svg#icon-calc1" />
+                  </svg>
+                  <p>Вкладываете</p>
+                  <p><strong>100 000 руб</strong></p>
+                </div>
+                <div class="modal__calc-item">
+                  <svg class="modal__calc-icon">
+                    <use xlink:href="img/sprite.svg#icon-calc2" />
+                  </svg>
+                  <p>Владеете</p>
+                  <p><strong>14% компании</strong></p>
+                </div>
+                <div class="modal__calc-descr"> Проценты и часть теда долга выплачиваются ежемесячно </div>
+              </div>
+              <div class="modal__subtitle">Выберите реквизиты для договора</div>
+              <div class="modal__radio-select">
+                <div class="modal__radio-group">
+                  <input type="radio" class="radio" id="r31" name="r2"><label for="r31">Иван Петров</label>
+                </div>
+                <div class="modal__radio-group">
+                  <input type="radio" class="radio" id="r41" name="r2"><label for="r41">ИП Иван Петров</label>
+                </div>
+                <div class="modal__radio-group">
+                  <input type="radio" class="radio" id="r51" name="r2"><label for="r51">ООО “Иваново”</label>
+                </div>
+              </div>
+              <div class="modal__subtitle">Договор</div>
+              <div class="modal__declaration">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.</p>
+              </div>
+              <a href="">Декларация о рисках</a>
+              <div class="modal__footer">
+                <div class="modal__confirmation">
+                  <input type="checkbox" name="" id="ch1" class="checkbox"><label for="ch1" class="modal__gray">Я ознакомлен с деклорацией о рисках</label>
+                </div>
+                <button class="modal__btn modal__btn--auto">Выставить счет</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-loan1">
+      <div class="modal__dialog modal__dialog--medium">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__htitle"></div>
+            <div class="modal__close">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-cancel" />
+              </svg>
+            </div>
+          </div>
+          <div class="modal__body form">
+            <form>
+              <div class="modal__title modal__title--flag">Системы охлаждения “Мороз”</div>
+              <p class="descr">Забронируйте участие и мы свяжемся с вами, когда проект будет готов к сбору средств. Бронирование не обязывает вас инвестировать, вы сможете изменить решение</p>
+              <div class="modal__subtitle">Выберите сумму бронирования</div>
+              <div class="modal__slider">
+                <input type="range" name="" id="" value="25" class="js--range-slider">
+              </div>
+              <p class="modal__grey">Минимальная сумма для инвестирования 100 000 р.</p>
+              <hr>
+              <div class="modal__calc modal__calc--mb">
+                <div class="modal__calc-item">
+                  <svg class="modal__calc-icon">
+                    <use xlink:href="img/sprite.svg#icon-loan2" />
+                  </svg>
+                  <p>Инвестируете</p>
+                  <p><strong>100 000 руб</strong></p>
+                </div>
+                <div class="modal__calc-item">
+                  <svg class="modal__calc-icon">
+                    <use xlink:href="img/sprite.svg#icon-loan1" />
+                  </svg>
+                  <p>Владеете долей</p>
+                  <p><strong>14% компании</strong></p>
+                </div>
+                <div class="modal__calc-descr"> Диведенты не выплачиваются. Зарабатываете на продаже своей доли </div>
+              </div>
+              <p class="modal__deadline modal__grey">Ориентировочная дата сбора средств и запуска проекта 14.02.2019</p>
+              <div class="modal__subtitle"><a href="">Декларация о рисках</a></div>
+              <div class="modal__footer">
+                <div class="modal__confirmation">
+                  <input type="checkbox" name="" id="ch1" class="checkbox"><label for="ch1" class="modal__gray">Я ознакомлен с деклорацией о рисках</label>
+                </div>
+                <button class="modal__btn modal__btn--auto">Выставить счет</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" data-modal="modal-loan2">
+      <div class="modal__dialog modal__dialog--medium">
+        <div class="modal__content">
+          <div class="modal__header">
+            <div class="modal__htitle"></div>
+            <div class="modal__close">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-cancel" />
+              </svg>
+            </div>
+          </div>
+          <div class="modal__body form">
+            <form>
+              <div class="modal__title modal__title--flag">Системы охлаждения “Мороз”</div>
+              <p class="descr">После бронирования мы уведомим вас о сборе средств и запуске проекта. Обязательств по инвестированию в проект нет, вы можете изменить решение</p>
+              <div class="modal__square">
+                <div class="modal__square-item">
+                  <p>Срок займа</p>
+                  <p><strong>365 дней</strong></p>
+                </div>
+                <div class="modal__square-item">
+                  <p>Ставка</p>
+                  <p><strong>24%</strong></p>
+                </div>
+              </div>
+              <div class="modal__subtitle">Выберите сумму бронирования</div>
+              <div class="modal__slider">
+                <input type="range" name="" id="" value="25" class="js--range-slider">
+              </div>
+              <p class="modal__grey">Минимальная сумма для инвестирования 100 000 р.</p>
+              <hr>
+              <div class="modal__calc modal__calc--mb">
+                <div class="modal__calc-item">
+                  <svg class="modal__calc-icon">
+                    <use xlink:href="img/sprite.svg#icon-loan2" />
+                  </svg>
+                  <p>Инвестируете</p>
+                  <p><strong>100 000 руб</strong></p>
+                </div>
+                <div class="modal__calc-item">
+                  <svg class="modal__calc-icon">
+                    <use xlink:href="img/sprite.svg#icon-calc2" />
+                  </svg>
+                  <p>Зарабатываете</p>
+                  <p><strong>124 000 руб</strong></p>
+                </div>
+                <div class="modal__calc-descr"> Проценты и часть теда долга выплачиваются ежемесячно </div>
+              </div>
+              <p class="modal__deadline modal__grey">Ориентировочная дата сбора средств и запуска проекта 14.02.2019</p>
+              <div class="modal__subtitle"><a href="">Декларация о рисках</a></div>
+              <div class="modal__footer">
+                <div class="modal__confirmation">
+                  <input type="checkbox" name="" id="ch1" class="checkbox"><label for="ch1" class="modal__gray">Я ознакомлен с деклорацией о рисках</label>
+                </div>
+                <button class="modal__btn modal__btn--auto">Выставить счет</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>
